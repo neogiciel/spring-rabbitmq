@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.sprintrabbitmq.util.Trace;
+
 import org.springframework.amqp.core.Queue;
 
 
@@ -22,6 +24,8 @@ public class RabbitMQController {
 
     @GetMapping("/send")
     public String sendMessage() {
+        Trace.info("[RabbitMQController] send messge");
+
         String message = "Hello RabbitMQ!";
         rabbitTemplate.convertAndSend(queue.getName(), message);
         return "Message sent to the RabbitMQ Successfully";
@@ -30,6 +34,7 @@ public class RabbitMQController {
 
     @GetMapping("/sendparam/{id}")
     public String sendMessageWithParam(@PathVariable String id) {
+        Trace.info("[RabbitMQController] send messge with id = "+ id);
         String message = "Message "+ id;
         rabbitTemplate.convertAndSend(queue.getName(), message);
         return "Message sent to the RabbitMQ Successfully";
