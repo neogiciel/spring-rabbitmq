@@ -16,7 +16,7 @@ resources:
   type: docker-image
   source:
       repository: neogicel/spring-rabbitmq
-      tag: '1.0'
+      tag: '1.1'
       username: neogicel
       password: Patrice88$
 
