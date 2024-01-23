@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-rabbitmq-k8s
-          image: neogicel/spring-rabbitmq:1.4
+          image: neogicel/spring-rabbitmq:1.5
 # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
