@@ -1,7 +1,7 @@
 #docker build
-docker build -t neogicel/spring-rabbit .
-docker tag neogicel/spring-rabbit:4.0
-docker run -dit --name spring-rabbit -p 8084:80 neogicel/spring-rabbit
+docker build -t neogicel/spring-rabbitmq .
+docker tag neogicel/spring-rabbitmq:1.6
+docker run -dit --name spring-rabbit -p 8086:80 neogicel/spring-rabbitmq
 
 #build
 docker build --tag "neogicel/spring-rabbit:1.0" .
