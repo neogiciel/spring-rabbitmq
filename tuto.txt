@@ -11,8 +11,11 @@ docker run -p 8089:8089 neogicel/spring-rabbit:1.0
 docker push neogicel/gw-springboot-keycloak:1.0
 
 #commande dans un pod
-kubectl logs spring-rabbitmq-k8s-6ccdd48bbb-twrv9   
-kubectl exec -it spring-rabbitmq-k8s-5545d6f9c9-2ftk6  -- sh
+kubectl logs spring-rabbitmq-k8s-9477f85cf-n4t6j    
+kubectl exec -it spring-rabbitmq-k8s-9477f85cf-n4t6j  -- sh
+
+
+
 
 dans pod faire echo "test" > /usr/share/nginx/html/index.html
 

@@ -22,6 +22,18 @@ public class RabbitMQController {
     @Autowired
     private Queue queue;
 
+    @GetMapping("/test")
+    public String test() {
+        Trace.info("[RabbitMQController] test");
+        return "Test";
+    }
+
+    @GetMapping("/hello")
+    public String hello(){
+      return "12345678";
+    }
+  
+
     @GetMapping("/send")
     public String sendMessage() {
         Trace.info("[RabbitMQController] send messge");

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+<div>
+    <div>Spring Boot : 8086</div>
+    Dernier Messages:<br> 
+    Texte: <th th:text="${msg}">Name</th>
+    <br>
+    <table border="1">
+    <tr th:if="${liste.empty}">
+        <td colspan="2"> Pas d element </td>
+    </tr>
+    <tr>
+        <td>ID</td>
+        <td>Message</td>
+    </tr>    
+    <tr th:each="element : ${liste}">
+        <td><span th:text="${element.id}"> Title </span></td>
+        <td><span th:text="${element.message}"> Author </span><br></td>
+    </tr>
+    </table>
+
+</div>
+</body>
+</html>
