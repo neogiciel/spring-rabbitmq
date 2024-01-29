@@ -2,8 +2,8 @@ package com.example.sprintrabbitmq.model;
 
 import java.util.List;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
+//import org.json.JSONArray;
+//import org.json.JSONObject;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -42,21 +42,21 @@ public class Message {
     /*
      * toJSON
      */
-    public JSONObject toJSON(Message m) {
+    /*public JSONObject toJSON(Message m) {
 
         JSONObject obj = new JSONObject();
         obj.put("id", m.id);
         obj.put("message", m.message);
             
         return obj;
-    }    
+    } */   
 
 
 
     /*
      * totListeJSON
      */
-    public JSONArray totListeJSON( List<Message> liste ) {
+    /*public JSONArray totListeJSON( List<Message> liste ) {
 
         JSONArray jsonArray = new JSONArray();
 
@@ -69,7 +69,7 @@ public class Message {
             jsonArray.put(obj);
         }
         return jsonArray;
-    } 
+    } */
 
 
 }
