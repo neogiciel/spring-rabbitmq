@@ -28,8 +28,13 @@ public class RabbitMQController {
         return "Test";
     }
 
-    @GetMapping("/hello")
-    public String hello(){
+    @GetMapping("/chiffer")
+    public String chiffer(){
+      return "87654321";
+    }
+  
+    @GetMapping("/dechiffrer")
+    public String dechiffer(){
       return "12345678";
     }
   
