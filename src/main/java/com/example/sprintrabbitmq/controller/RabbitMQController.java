@@ -4,6 +4,7 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,6 +14,7 @@ import org.springframework.amqp.core.Queue;
 
 
 @RestController
+@RequestMapping("/rabbit")
 public class RabbitMQController {
 
     
@@ -28,21 +30,9 @@ public class RabbitMQController {
         return "Test";
     }
 
-    @GetMapping("/chiffer")
-    public String chiffer(){
-      return "87654321";
-    }
-  
-    @GetMapping("/dechiffrer")
-    public String dechiffer(){
-      return "12345678";
-    }
-  
-
     @GetMapping("/send")
     public String sendMessage() {
         Trace.info("[RabbitMQController] send messge");
-
         String message = "Hello RabbitMQ!";
         rabbitTemplate.convertAndSend(queue.getName(), message);
         return "Message sent to the RabbitMQ Successfully";
@@ -56,4 +46,12 @@ public class RabbitMQController {
         rabbitTemplate.convertAndSend(queue.getName(), message);
         return "Message sent to the RabbitMQ Successfully";
     }
+
+    @GetMapping("/sendform")
+    public String sendFormWithParam(@RequestParam String message) {
+        Trace.info("[RabbitMQController] send message = "+ message);
+        rabbitTemplate.convertAndSend(queue.getName(), message);
+        return "Message sent to the RabbitMQ Successfully";
+    }
+
 }

@@ -196,3 +196,78 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 a:hover { color: #FFFFFF; text-decoration: none }
 a:link { text-decoration: none }
 a:visited { text-decoration: none }
+
+/*======= tableau =======*/
+.tabborder {
+	border:1px solid #666666;
+	box-shadow:1px 1px 3px #666666;
+}
+.tabtitre {
+	font-weight:480;
+	font-family:'Futura Bk',Arial,sans-serif;
+	font-size:14px;
+	background-color: #000000;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	font-weight:bold
+}
+.tabtitre-small {
+	font-weight:480;
+	font-family:'Futura Bk',Arial,sans-serif;
+	font-size:12px;
+	background-color: #492D1F;
+	color: #FFFFFF;
+	font-weight:bold
+}
+.tabcell {
+	font-weight:480;
+	font-family:'Futura Lt',Arial,sans-serif;
+	font-size:14px;
+	background-color: #D6D6D6;
+	color: #202020;
+}
+
+.tabcell-upper {
+	font-weight:400;
+	font-family:'Futura Bk',Arial,sans-serif;
+	font-size:16px;
+	background-color: #D6D6D6;
+	color: #202020;
+	text-transform: uppercase;
+	font-weight:bold;
+}
+
+
+.tabcell -bouton{
+	background-color: #D6D6D6;;
+	align-content: center;
+}
+
+.tabcell-big {
+	font-weight:480;
+	font-family:'Futura Bk',Arial,sans-serif;
+	font-size:18px;
+	background-color: #D6D6D6;
+	color: #222222;
+}
+
+.tablien {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
+	background-color: #D6D6D6;
+	color: #202020;
+	font-weight:bold
+}
+
+.tabnav {
+	font-weight:480;
+	font-family:'Futura Bk',Arial,sans-serif;
+	font-size:12px;
+	background-color: #ADC642;
+	color: #FFFFFF;
+	font-weight: bold
+}
+.tabnav a:hover { color: #FFFFFF; text-decoration: none }
+.tabnav a:link { text-decoration: none }
+.tabnav a:visited { text-decoration: none }
+

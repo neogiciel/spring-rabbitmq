@@ -20,7 +20,7 @@ import org.springframework.ui.ModelMap;
 
 
 @Controller
-@RequestMapping("/page")
+//@RequestMapping("/page")
 public class PageRabbitController {
 
     //BddManager
@@ -28,7 +28,7 @@ public class PageRabbitController {
     BddManager bdd;
 
     @GetMapping
-    @RequestMapping("/rabbit")
+    @RequestMapping("/page/rabbit")
     public String page(Model model) {
         
 
@@ -38,7 +38,7 @@ public class PageRabbitController {
         int nb = liste.size();
         model.addAttribute("msg", "Nb Message = "+ nb);
         model.addAttribute("liste", liste);
-        return "page";
+        return "pagerabbit";
     }
 
 

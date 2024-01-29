@@ -27,7 +27,7 @@ public class BddManagerImpl implements BddManager{
     public List<Message> getListMessages(){
         Trace.info("[BddManager] select * from MESSAGE");
         @SuppressWarnings("unchecked")
-        List<Message> liste =  em.createNativeQuery("select * from MESSAGE",Message.class).getResultList();
+        List<Message> liste =  em.createNativeQuery("select * from MESSAGE ORDER BY IDMESSAGE DESC LIMIT 10",Message.class).getResultList();
         return liste;
 	}
 
