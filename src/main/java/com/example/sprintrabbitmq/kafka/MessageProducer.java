@@ -15,7 +15,7 @@ public class MessageProducer {
     public void sendMessage(String topic, String message) {
         Trace.info("[MessageProducer] topic: " + topic);
         Trace.info("[MessageProducer] message: " + message);
-        kafkaTemplate.send(topic, message);
+        //kafkaTemplate.send(topic, message);
     }
 
 }

@@ -34,15 +34,16 @@ public class KafkaController {
 
     @GetMapping("/sendform")
     public String sendFormWithParam(@RequestParam String message) {
-        
+
+        Trace.info("[RabbitMQController] *******************************************");
         Trace.info("[RabbitMQController] send message = "+ message);
         Trace.info("[RabbitMQController] host = "+ kafkaHost);
         Trace.info("[RabbitMQController] topic = "+ kafkaTopic);
         Trace.info("[RabbitMQController] groupid = "+ kafkaGroupId);
-
-
         messageProducer.sendMessage(kafkaTopic, message);
         return "Message sent to the RabbitMQ Successfully";
+        
+        
     }
 
 
