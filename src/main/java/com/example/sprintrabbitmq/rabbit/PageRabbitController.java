@@ -1,4 +1,4 @@
-package com.example.sprintrabbitmq.controller;
+package com.example.sprintrabbitmq.rabbit;
 
 import java.util.Date;
 import java.util.List;
@@ -20,7 +20,6 @@ import org.springframework.ui.ModelMap;
 
 
 @Controller
-//@RequestMapping("/page")
 public class PageRabbitController {
 
     //BddManager

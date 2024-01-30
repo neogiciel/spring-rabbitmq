@@ -1,0 +1,64 @@
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Test Broker</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body >
+  
+<div class="header" align="right"><img src="/img/spring.jpg" height="60px"></div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+      <li><a href="/">Application <span>Spring Boot</span></a></li>
+      <li><a href="http://www.neogiciel.com" target="_blank">Company</a></li>
+    </ul>
+  </div>
+  <div id='center' class="main center">
+    <div class="p">
+     <div class="txt">Kafka</div>
+      
+        <br>
+        
+        <form action="/kafka/sendform" method="get">
+          <div>
+            <label for="say">Message</label>
+            <input name="message" id="message" value="Salut a tous" />
+          </div>
+          <div>
+            <button>Envoyer</button>
+          </div>
+        </form>
+        
+        <center>
+        <table width="60%">
+        <tr th:if="${liste.empty}">
+            <td colspan="2"> Pas d element </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="tabtitre">Messages</td>
+        </tr>
+        <tr>
+            <td class="tabtitre">ID</td>
+            <td class="tabtitre">Message</td>
+        </tr>    
+        <tr th:each="element : ${liste}">
+            <td class="tabcell"><span th:text="${element.id}"> Title </span></td>
+            <td class="tabcell"><span th:text="${element.message}"> Author </span><br></td>
+        </tr>
+        </table>
+        </center>
+
+
+
+    </div>
+</div>
+</body>
+</html>
