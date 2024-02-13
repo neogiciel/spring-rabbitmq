@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-rabbitmq-k8s
-          image: neogicel/spring-rabbitmq:2.9
+          image: neogicel/spring-rabbitmq:4.0
 # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
@@ -45,7 +45,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /spring-rabbitmq
+      - path: /springrabbitmq
         pathType: Prefix
         backend:
           service:

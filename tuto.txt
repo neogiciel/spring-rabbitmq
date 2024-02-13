@@ -2,7 +2,7 @@
 docker build -t neogicel/spring-rabbitmq .
 docker tag neogicel/spring-rabbitmq neogicel/spring-rabbitmq:2.0
 docker push neogicel/spring-rabbitmq:2.0
-docker run -dit --name spring-rabbit -p 8086:80 neogicel/spring-rabbitmq
+docker run -dit --name spring-rabbit -p 8086:8086 neogicel/spring-rabbitmq
 
 #build
 docker build --tag "neogicel/spring-rabbit:1.0" .
