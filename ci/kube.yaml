@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-rabbitmq-k8s
-          image: neogicel/spring-rabbitmq:2.4
+          image: neogicel/spring-rabbitmq:2.9
 # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
@@ -38,14 +38,14 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: gateway-keycloak-k8s-ingress
+  name: spring-rabbitmq-k8s-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - http:
       paths:
-      - path: /
+      - path: /spring-rabbitmq
         pathType: Prefix
         backend:
           service:
