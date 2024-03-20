@@ -9,7 +9,7 @@
 
 ## Informations Générales
 ***
-Mise en place d'un broker Rabit MQ permettan la gestion de message Asynchrone
+Mise en place d'un broker Rabbit MQ permettan la gestion de message Asynchrone
 
 ## Technologies
 ***
