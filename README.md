@@ -1,5 +1,4 @@
-﻿# spring-rabbitmq
-## <h1>Application Spring Boot Rabbit MQ</h1>
+﻿## <h1>Application Spring Boot Rabbit MQ</h1>
 ***
 <table>
   <tr>
@@ -10,16 +9,37 @@
 
 ## Informations Générales
 ***
-Mise en place d'une application Spring-boot avec la librairie Thymeleaf
+Mise en place d'un broker Rabit MQ permettan la gestion de message Asynchrone
+
 ## Technologies
 ***
 Technologies utilisées:
 * Java 17 
 * Maven 3.6
-* Thymeleaf
 * Spring-boot: 3.2
 ## Instalation
 ***
+Deploiement de Rabbit MQ via docker compose
+```
+version: '3'
+
+services:
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+networks:
+  default:
+    driver: bridge
+```
+Lancement de RabbitMQ
+docker-compose up -d
 
 Lancement de l'application Spring-boot<br>
 ```
