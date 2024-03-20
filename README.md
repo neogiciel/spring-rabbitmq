@@ -55,8 +55,8 @@ Le seveur est accessible via http://localhost:5672
 
 **Interface d'Administration de RabbitMQ**<br>
 Le seveur est accessible via http://localhost:15672<br>
-Login: guest
-Password: guest
+Login: guest<br>
+Password: guest<br>
 
 
 
