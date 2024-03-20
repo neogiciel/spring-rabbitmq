@@ -50,8 +50,13 @@ Le service est accessible sur http://localhost:8080
 
 ## FAQs
 ***
-**Aucun**
+**Serveur RabbitMQ**
+Le seveur est accessible via http://localhost:5672
 
+**Interface d'Administration de RabbitMQ**
+Le seveur est accessible via http://localhost:15672
+Login: guest
+Password: guest
 
 
 
